@@ -8,8 +8,8 @@ export default (props) => {
     return (
         <div>
             <div className="clearfix">
-                <img src={userImageUrl} className="img-circle pull-left"/>
-                <h3 className="pull-left">{comment.user}</h3>
+                <img src={userImageUrl} className="img-circle comment-avatar"/>
+                <strong>{comment.user}</strong>
             </div>
             <section>{comment.text}</section>
         </div>

@@ -7,3 +7,6 @@ ul {
     float: left;
     margin: 12px 10px 0;
 }
+.comment-avatar {
+    margin-right: 10px;
+}
