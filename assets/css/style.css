@@ -7,6 +7,18 @@ ul {
     float: left;
     margin: 12px 10px 0;
 }
+.navbar-copyright {
+    float: right;
+}
+.navbar-copyright > a {
+    color: #fff;
+}
+.page {
+    padding-top: 80px;
+}
+.comments-list {
+    margin-top: 10px;
+}
 .comment-avatar {
     margin-right: 10px;
 }

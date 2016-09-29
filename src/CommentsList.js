@@ -13,9 +13,10 @@ export default class CommentsList extends Component {
         const { isOpen } = this.state;
         
         const commentsComponents = comments.map(comment => <li key={comment.id}><Comment comment={comment}/></li>);
-        const commentsList = isOpen ? <ul>{commentsComponents}</ul> : null;
+        const commentsList = isOpen ? <ul className="comments-list">{commentsComponents}</ul> : null;
         
-        const commentsWrap = comments.length ? <div><a href="#" onClick={this.toggleOpen}>{isOpen ? 'Hide comments' : 'Show comments'}</a>{commentsList}</div> : <p className="text-warning">There are no comments</p>
+        const commentLink = <a href="#" onClick={this.toggleOpen}>{isOpen ? 'Hide comments' : 'Show comments'}</a>;
+        const commentsWrap = comments.length ? <div>{commentLink}{commentsList}</div> : <p className="text-warning">There are no comments</p>
         
         return (commentsWrap)
     }
