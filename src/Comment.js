@@ -1,16 +1,11 @@
-import React from 'react';
+import React from 'react'
 
 export default (props) => {
-    
-    const { comment } = props;
-    const userImageUrl = `https://randomuser.me/api/portraits/thumb/men/${comment.id}.jpg`;
-    
+    const { comment } = props
+
     return (
         <div>
-            <div className="clearfix">
-                <img src={userImageUrl} className="img-circle comment-avatar"/>
-                <strong>{comment.user}</strong>
-            </div>
+            <p>{comment.user}:</p>
             <section>{comment.text}</section>
         </div>
     )
