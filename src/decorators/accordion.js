@@ -13,7 +13,7 @@ export default function Accordion(Component) {
 
         toggleOpenArticle = id => ev => {
             this.setState({
-                openArticleId: id
+                openArticleId: (id != this.state.openArticleId) ? id : null
             })
         }
         
