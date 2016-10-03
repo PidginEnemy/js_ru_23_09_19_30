@@ -5,7 +5,9 @@ import toggleOpen from './decorators/toggleOpen'
 class CommentList extends Component {
 
     static propTypes = {
-        comments: PropTypes.array
+        comments: PropTypes.array,      // comments array
+        isOpen: PropTypes.bool,         // open/close comments on current article
+        toggleOpen: PropTypes.func      // open/close comments list function (from decorator)
     }
 
     componentWillMount() {
