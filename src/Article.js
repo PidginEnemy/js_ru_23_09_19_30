@@ -4,14 +4,14 @@ import CommentList from './CommentList'
 export default class Article extends Component {
 
     static propTypes = {
-        article: PropTypes.shape({      // article object
+        article: PropTypes.shape({                  // article object
             id: PropTypes.string.isRequired,
             title: PropTypes.string.isRequired,
             text: PropTypes.string,
             comments: PropTypes.array
         }).isRequired,
-        isOpen: PropTypes.bool,         // article open or close
-        openArticle: PropTypes.func     // open/close article by id
+        isOpen: PropTypes.bool.isRequired,          // article open or close
+        openArticle: PropTypes.func.isRequired      // open/close article by id
     }
 
     state = {
