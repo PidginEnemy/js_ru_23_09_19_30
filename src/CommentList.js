@@ -28,11 +28,11 @@ class CommentList extends Component {
 
     render() {
         const { comments, isOpen, toggleOpen } = this.props
-        if (!comments || !comments.length) return <p>No comments yet</p>
+        if (!comments || !comments.length) return <p className="text-warning">No comments yet</p>
 
         const commentItems = comments.map(comment => <li key={comment.id}><Comment comment = {comment}/></li>)
         const text = isOpen ? 'hide comments' : `show ${comments.length} comments`
-        const body = isOpen && <ul>{commentItems}</ul>
+        const body = isOpen && <ul className="comments-list">{commentItems}</ul>
 
         return (
             <div ref = {this.getRef}>

@@ -1,11 +1,18 @@
 import React, { PropTypes } from 'react'
 
 function Comment(props) {
-    const { text, user } = props.comment
+
+    const { id, text, user } = props.comment
+    const userImageUrl = `https://randomuser.me/api/portraits/thumb/men/${id}.jpg`
+
     return (
-        <p>
-            {text} <strong>by {user}</strong>
-        </p>
+        <div>
+            <div className="clearfix">
+                <img src={userImageUrl} className="img-circle comment-avatar"/>
+                <strong>{user}</strong>
+            </div>
+            <section>{text}</section>
+        </div>
     )
 }
 
