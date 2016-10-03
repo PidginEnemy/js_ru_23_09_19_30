@@ -12,6 +12,7 @@ export default class Article extends Component {
         const {article, isComments, ...other} = this.props;
 
         const comments = article.comments || [];
+        //не понятно зачем isComments, а в остальном все хорошо
         const commentsList = isComments ? <CommentsList comments={comments}/> : null;
         const body = <div>
             <section>{article.text}</section>
