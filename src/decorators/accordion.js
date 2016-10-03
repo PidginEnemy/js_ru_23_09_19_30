@@ -4,6 +4,7 @@ export default function Accordion(Component) {
     return class WrappedComponent extends React.Component {
 
         state = {
+            //Не привязывайся к названию сущности, декоратор будет использоваться везде. Назови, скажем, openItemId
             openArticleId: null
         }
         
