@@ -1,7 +1,7 @@
 # ReactJS learning project
 ## About
 This is project for learning ReactJS.
-Demo - [here](http://pidginenemy.github.io/react_learn/)
+Demo - [here](http://pidginenemy.github.io/react_learn/homework1)
 
 https://facebook.github.io/react/docs/reconciliation.html
 https://babeljs.io/repl/
