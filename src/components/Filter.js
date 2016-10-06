@@ -2,9 +2,8 @@ import React, { Component, PropTypes } from 'react'
 // Select
 import Select from 'react-select'
 import 'react-select/dist/react-select.css'
-// DayPicker
-import DayPicker, { DateUtils } from 'react-day-picker'
-import 'react-day-picker/lib/style.css'
+// PeriodPicker
+import PeriodPicker from './PeriodPicker'
 
 
 class Filter extends Component {
@@ -14,34 +13,23 @@ class Filter extends Component {
     };
 
     state = {
-        selectedOptions: null,
-        from: null,
-        to: null
+        selectedOptions: null
     }
 
     handleSelectChange = selectedOptions => this.setState({ selectedOptions })
 
-    handleDayChange = (e,day) => {
-        const range = DateUtils.addDayToRange(day, this.state)
-        this.setState(range)
-    }
-
     render() {
         const { articles } = this.props
-        const { selectedOptions, from, to } = this.state
+        const { selectedOptions } = this.state
         const options = articles.map(article => ({
             label: article.title,
             value: article.id
         }))
+        
         return (
             <div className="row">
                 <div className="col-lg-8">
-                    <DayPicker
-                        ref="daypicker"
-                        numberOfMonths={ 2 }
-                        onDayClick = {this.handleDayChange}
-                        selectedDays={ day => DateUtils.isDayInRange(day, { from, to }) }
-                    />
+                    <PeriodPicker/>
                 </div>
                 <div className="col-lg-4">
                     <Select
