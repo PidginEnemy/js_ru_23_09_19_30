@@ -17,24 +17,11 @@ class Container extends Component {
         
         const { articles, filters } = this.props
 
-        function filterArticles(articles,filteredArticles) {
-            let f_articles = []
-            for(let art of articles) {
-                for(let f_art of filteredArticles) {
-                    if(art.id == f_art.value)
-                        f_articles.push(art)
-                }
-            }
-            return f_articles
-        }
-
-        const filteredArticles = (filters && filters.articles.length) ? filterArticles(articles, filters.articles) : articles
-
         return (
             <div>
                 <Counter/>
                 <Filter articles = { articles }/>
-                <ArticleList articles = { filteredArticles }/>
+                <ArticleList articles = { articles } filters = { filters }/>
                 <Chart />
                 <NewArticleForm />
             </div>
