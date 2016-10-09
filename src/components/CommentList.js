@@ -5,11 +5,11 @@ import NewCommentForm from './NewCommentForm'
 
 function CommentList(props) {
     const { comments, isOpen, toggleOpen } = props
-    if (!comments || !comments.length) return <p>No comments yet</p>
+    if (!comments || !comments.length) return <div><p>No comments yet</p><NewCommentForm /></div>
 
     const commentItems = comments.map(comment => <li key={comment.id}><Comment comment={comment}/></li>)
     const text = isOpen ? 'hide comments' : `show ${comments.length} comments`
-    const body = isOpen && <ul>{commentItems}</ul>
+    const body = isOpen && <div><ul>{commentItems}</ul><NewCommentForm /></div>
 
     return (
         <div>
