@@ -4,6 +4,7 @@ import DayPicker, { DateUtils } from 'react-day-picker'
 import 'react-day-picker/lib/style.css';
 
 class DatePicker extends Component {
+    //это тоже в стор надо было вынести
     state = {
         from: null,
         to: null
